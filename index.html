@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<head>
+        <!--Boostrap's CSS-->
+        <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <!--Custom CSS-->
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+     <title>Cryptocurrency Overview</title>
+</head>
+
+<body>
+    <h1>Cryptocurrency Valuation Overview</h1>
+    <div id=boxModel style="overflow-x:auto;">
+        <input id = "ticker"/>
+        <input type = "submit" onclick="searchCrypto();"/>
+        <br>
+        <br>
+    <div class="table-responsive">
+    <table class="w3-table">
+        <tr>
+            <td>Price (USD)</td>
+            <td id = "price"></td>
+        </tr>
+        <tr>
+            <td>Market Capitalisation (USD)</td>
+            <td id = marketCap></td>
+        </tr>
+        <tr>
+            <td>Volume traded (24h)</td>
+            <td id = volumeTraded></td>
+        </tr>
+    </table>
+    </div>
+    
+    <footer>Note only ticker symbols (such as BTC, ETH, LTC etc.) can be searched,
+        this is due to formatting issues on original coinmarketcap.com
+    </footer>
+    </div>
+
+
+        <!--jQuery Script-->
+        <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+        <!--Bootstrap Script-->
+        <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!--Custom Script-->
+        <script src="./js/main.js"></script>
+
+</body>
+
+</html>

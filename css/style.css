@@ -1,0 +1,23 @@
+h1{
+    text-align:center;
+}
+body{
+  background-color: lightgrey;
+  }
+
+#boxModel{
+    background-color: grey;
+    width: 80%;
+    padding: 25px;
+    margin: auto;
+    text-align:center;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid black;
+    text-align:left;
+}
+tr:nth-child(even){background-color:lightblue}
+tr:nth-child(odd){background-color:lightgrey}
