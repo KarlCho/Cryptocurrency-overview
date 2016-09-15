@@ -1,7 +1,7 @@
 
 var ticker = "";
 
-
+//referenced from index.html. searchCrypto is a very simple api retrieval method from user input then relevant data is placed into the index table cells
 function searchCrypto() {
     ticker = $("#ticker").val();
     if (ticker !== ""){
@@ -16,11 +16,14 @@ function searchCrypto() {
         });
     }
     else{
-        alert("Please put in a ticker value")
+        alert("Please put in a cryptocurrency ticker such as btc")
     }
 }
 
-/* WHY DOES THIS NOT WORK???????
+/* code below does not work despite replicating example code properly
+Most likely due to a mix of JSON data in a different format from the one above
+and/or mistaken retrievals from the JSON data.
+
         $.ajax({
             url: 'https://api.coinmarketcap.com/v1/ticker/bitcoin',
             type: 'GET',
