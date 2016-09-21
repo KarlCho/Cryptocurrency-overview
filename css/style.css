@@ -1,29 +1,106 @@
+html{
+    background: url(wallpaper.jpg);
+}
 h1{
     text-align:center;
 }
 body{
-  background-color: lightgrey;
-  }
-
-#boxModel{
-    background-color: grey;
-    width: 80%;
-    padding: 25px;
     margin: auto;
     text-align:center;
+    width: 80%;
+    padding: 25px;
+    color:white;
+    background: rgba(25, 25, 25, .5);
+}
+#boxModel{
+    background-color:darkgrey;
+    width:100%;
+
+    color:black;
 }
 table {
     border-spacing: 0;
     border: 1px solid black;
     text-align:left;
+    height:90%; 
+    width: 90%; 
+    overflow: hidden;
+    white-space: nowrap;
+    margin:auto;
 }
-.tableFix{
-   height:90%; 
-   width: 90%; 
-   overflow: hidden;
-   white-space: nowrap;
-   margin:auto;
-}
+	th { 
+		background: #333; 
+		color: white; 
+		font-weight: bold; 
+	}
 
-tr:nth-child(even){background-color:lightblue}
-tr:nth-child(odd){background-color:lightgrey}
+
+
+tr:nth-child(odd){background-color:lightblue}
+
+/*sourced from https://css-tricks.com/responsive-data-tables/ 
+    Changes the table format cleanly when going less than a certain window size
+*/
+
+	@media 
+	only screen and (max-width: 760px),
+	(min-device-width: 768px) and (max-device-width: 1024px)  {
+	
+		/* Force table to not be like tables anymore */
+		table, thead, tbody, th, td, tr { 
+			display: block; 
+		}
+		
+		/* Hide table headers (but not display: none;, for accessibility) */
+		thead tr { 
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
+		
+		tr { border: 1px solid #ccc; }
+		
+		td { 
+			/* Behave  like a "row" */
+			border: none;
+			border-bottom: 1px solid #eee; 
+			position: relative;
+			padding-left: 50%; 
+		}
+		
+		td:before { 
+			/* Now like a table header */
+			position: absolute;
+			/* Top/left values mimic padding */
+			top: 6px;
+			left: 6px;
+			width: 45%; 
+			padding-right: 10px; 
+			white-space: nowrap;
+		}
+		
+		/*
+		Label the data
+		*/
+		td:nth-of-type(1):before { content: "Value"; }
+		td:nth-of-type(2):before { content: "Price"; }
+		td:nth-of-type(3):before { content: "Market Cap."; }
+		td:nth-of-type(4):before { content: "Volume"; }
+	}
+	
+	/* Smartphones (portrait and landscape) ----------- */
+	@media only screen
+	and (min-device-width : 320px)
+	and (max-device-width : 480px) {
+		body { 
+			padding: 0; 
+			margin: 0; 
+			width: 320px; }
+		}
+	
+	/* iPads (portrait and landscape) ----------- */
+	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+		body { 
+			width: 495px; 
+		}
+	}

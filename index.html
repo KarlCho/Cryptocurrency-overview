@@ -25,31 +25,50 @@
     <h1>Cryptocurrency Valuation Overview</h1>
 
     <div id=boxModel style="overflow-x:auto;">
-        <input id = "ticker"/>
+        <input id = "ticker" value="btc"/>
         <input type = "submit" onclick="searchCrypto();"/>
         <br>
         <br>
-    
-    <div class=tableFix>
-    <table class = tableFix>
+    <h2 id = "cryptoName"></h2>
+    <p id = "supply"></p>
+    <table>
+        <thead>
+            <tr>
+                <th>Value</th>
+                <th>Price</th>
+                <th>Market Capitalisation</th>
+                <th>Volume</th>
+            </tr>
+        </thead>
         <tr>
-            <td>Price (USD)</td>
-            <td id = "price"></td>
+            <td>USD</td>
+            <td id = "priceUSD"></td>
+            <td id = "marketUSD"></td>
+            <td id = "volumeUSD"></td>
         </tr>
         <tr>
-            <td>Market Capitalisation (USD)</td>
-            <td id = "marketCap"></td>
+            <td>EUR</td>
+            <td id = "priceEUR"></td>
+            <td id = "marketEUR"></td>
+            <td id = "volumeEUR"></td>
         </tr>
         <tr>
-            <td>Volume traded (24h)</td>
-            <td id = "volumeTraded"></td>
+            <td>CNY</td>
+            <td id = "priceCNY"></td>
+            <td id = "marketCNY"></td>
+            <td id = "volumeCNY"></td>
         </tr>
+        <tr>
+            <td>AUD</td>
+            <td id = "priceAUD"></td>
+            <td id = "marketAUD"></td>
+            <td id = "volumeAUD"></td>
+        </tr>
+
     </table>
-    </div>
     
     <footer>
-        Note only cryptocurrency ticker symbols (such as BTC, ETH, LTC etc.) can be utilised,
-        this is due to formatting issues on the original api site coinmarketcap.com
+        Note: please only query cryptocurrency ticker symbols (such as BTC, ETH, LTC etc.) 
     </footer>
     </div>
 
