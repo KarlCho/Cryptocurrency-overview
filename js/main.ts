@@ -1,12 +1,13 @@
-
-var ticker = "";
-
 //referenced from index.html. searchCrypto is a very simple api retrieval method from user input then relevant data is placed into the index table cells
 function searchCrypto() {
-    ticker = $("#ticker").val();
-    if (ticker !== ""){
-        $.get("https://coinmarketcap-nexuist.rhcloud.com/api/" + ticker, function(data){
+    var ticker = $("#ticker").val();
+    if (ticker !== "") {
+        $.get("https://coinmarketcap-nexuist.rhcloud.com/api/" + ticker, function (data) {
             var cryptoName = data["name"];
+            if (cryptoName == undefined){
+                alert("Please put in a valid cryptocurrency ticker");
+                return;
+            }
             document.getElementById("cryptoName").innerHTML = cryptoName;
             var supply = data["supply"];
             document.getElementById("supply").innerHTML = "total supply " + supply;
@@ -34,14 +35,12 @@ function searchCrypto() {
             document.getElementById("priceAUD").innerHTML = "$" + priceAU;
             document.getElementById("marketAUD").innerHTML = "$" + marketAU;
             document.getElementById("volumeAUD").innerHTML = "$" + volumeAU;
-
         });
     }
-    else{
-        alert("Please put in a cryptocurrency ticker such as btc")
+    else {
+        alert("Please put in a cryptocurrency ticker such as btc");
     }
 }
-
 /* code below does not work despite replicating example code properly
 Most likely due to a mix of JSON data in a different format from the one above
 and/or mistaken retrievals from the JSON data.

@@ -1,9 +1,11 @@
 html{
     background: url(wallpaper.jpg);
 }
+
 h1{
     text-align:center;
 }
+
 body{
     margin: auto;
     text-align:center;
@@ -12,11 +14,11 @@ body{
     color:white;
     background: rgba(25, 25, 25, .5);
 }
-#boxModel{
-    background-color:darkgrey;
-    width:100%;
 
+#boxModel{
+    background-color:grey;
     color:black;
+	
 }
 table {
     border-spacing: 0;
@@ -33,9 +35,7 @@ table {
 		color: white; 
 		font-weight: bold; 
 	}
-
-
-
+/*makest every odd table row a lightblue color for clarity*/
 tr:nth-child(odd){background-color:lightblue}
 
 /*sourced from https://css-tricks.com/responsive-data-tables/ 
@@ -57,13 +57,15 @@ tr:nth-child(odd){background-color:lightblue}
 			top: -9999px;
 			left: -9999px;
 		}
-		
-		tr { border: 1px solid #ccc; }
+		/*width at 115% so that the resulting data does not go past the table
+		*/
+		tr { border: 1px solid black;
+				width: 115%; }
 		
 		td { 
 			/* Behave  like a "row" */
 			border: none;
-			border-bottom: 1px solid #eee; 
+			border-bottom: 1px dotted black; 
 			position: relative;
 			padding-left: 50%; 
 		}
@@ -71,8 +73,7 @@ tr:nth-child(odd){background-color:lightblue}
 		td:before { 
 			/* Now like a table header */
 			position: absolute;
-			/* Top/left values mimic padding */
-			top: 6px;
+			top: 2px;
 			left: 6px;
 			width: 45%; 
 			padding-right: 10px; 

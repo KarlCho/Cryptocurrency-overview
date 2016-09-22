@@ -24,14 +24,15 @@
 <body>
     <h1>Cryptocurrency Valuation Overview</h1>
 
-    <div id=boxModel style="overflow-x:auto;">
+<!-- boxmodel: submit query to the footer-->
+    <div id=boxModel>
         <input id = "ticker" value="btc"/>
         <input type = "submit" onclick="searchCrypto();"/>
         <br>
         <br>
     <h2 id = "cryptoName"></h2>
     <p id = "supply"></p>
-    <table>
+    <table style="overflow-x:auto;">
         <thead>
             <tr>
                 <th>Value</th>
