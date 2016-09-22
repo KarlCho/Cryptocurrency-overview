@@ -87,20 +87,3 @@ tr:nth-child(odd){background-color:lightblue}
 		td:nth-of-type(3):before { content: "Market Cap."; }
 		td:nth-of-type(4):before { content: "Volume"; }
 	}
-	
-	/* Smartphones (portrait and landscape) ----------- */
-	@media only screen
-	and (min-device-width : 320px)
-	and (max-device-width : 480px) {
-		body { 
-			padding: 0; 
-			margin: 0; 
-			width: 320px; }
-		}
-	
-	/* iPads (portrait and landscape) ----------- */
-	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-		body { 
-			width: 495px; 
-		}
-	}
